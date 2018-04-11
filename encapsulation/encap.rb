@@ -64,4 +64,7 @@ end
 
 
 client = User.new
-
+cli = Message.new
+cli.groupChat("Hi Friends")
+client.sendPersonalMessage
+cli.secureChat

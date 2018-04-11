@@ -28,20 +28,22 @@
 # fullName -> My name is Bruce
 #                        Martha
 #                        Thomas
-
-
-Class Father  
-  def initialize  
-    puts 'I am the Father.'  
+class Father  
+  # def initialize(lastname) 
+    # puts 'I am the Father.'
+    def lname(lastname) 
+   p @lastname=lastname  
   end  
   
   # define fatherName --> father name is 'Thomas' . 
 end  
 
 
-Class Mother  
-  def initialize  
-    puts 'I am the Mother.'  
+class Mother  
+  # def initialize(middlename)  
+    # puts 'I am the Mother.'
+    def midlname(middlename)
+   p @middlename=middlename  
   end
 
   # define motherName -> mother's name is Martha
@@ -49,33 +51,44 @@ Class Mother
 end  
 
 # Class Son inherits his last name from his Father  
-Class Son < Father 
-  def firstName  
-    puts "My name is Bruce"  
+class Son < Father 
+  def firstName(fname)  
+    # puts "My name is Bruce"
+   p @fname=fname  
   end
 
   # define lastName --> last name should be father's name
 
-  def fullName
+  def fullName(fullname)
     # Print 'My name is Bruce Martha Thomas'
-    Print firstName motherName fatherName 
+    # Print firstName motherName fatherName
+   p @fullname=fullname 
   end
 end
 
 
 # Class Son is sub-Class of Mother   
-Class Son < Mother
-  def firstName  
-    puts 'My name is Bruce Wayne'  
-  end 
+# Class Son < Mother
+#   def firstName  
+#     puts 'My name is Bruce Wayne'  
+#   end
 
-  # define secondName --> second name should be Mother's name
+#   # define secondName --> second name should be Mother's name
 
-  def fullName
-    # Print 'My name is Bruce Martha Thomas'
-    puts firstName secondName lastName
-  end
-end
+#   def fullName
+#     # Print 'My name is Bruce Martha Thomas'
+#     puts firstName secondName lastName
+#   end
+# end
 
 # instantiate an object and print his firstName, secondName, lastName fullName.
+
+son=Son.new
+son.firstName("Bruce")
+mom=Mother.new
+mom.midlname("Martha")
+dad=Father.new
+dad.lname("Thomas")
+son.fullName("Bruce Martha Thomas")
+
 
