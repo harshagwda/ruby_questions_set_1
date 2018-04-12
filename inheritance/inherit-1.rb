@@ -28,43 +28,54 @@
 # fullName -> My name is Bruce
 #                        Martha
 #                        Thomas
-class Father  
+# class Father  
+
   # def initialize(lastname) 
     # puts 'I am the Father.'
-    def lname(lastname) 
-   p @lastname=lastname  
-  end  
+
+  #   def lname(lastname) 
+  #  p @lastname=lastname  
+  # end  
   
   # define fatherName --> father name is 'Thomas' . 
-end  
+
+# end  
 
 
-class Mother  
+# class Mother  
+
   # def initialize(middlename)  
     # puts 'I am the Mother.'
-    def midlname(middlename)
-   p @middlename=middlename  
-  end
+
+
+  #   def midlname(middlename)
+  #  p @middlename=middlename  
+  # end
 
   # define motherName -> mother's name is Martha
 
-end  
+# end  
 
 # Class Son inherits his last name from his Father  
-class Son < Father 
-  def firstName(fname)  
+
+# class Son < Father 
+#   def firstName(fname)  
+
     # puts "My name is Bruce"
-   p @fname=fname  
-  end
+
+  #  p @fname=fname  
+  # end
 
   # define lastName --> last name should be father's name
 
-  def fullName(fullname)
+  # def fullName(fullname)
+
     # Print 'My name is Bruce Martha Thomas'
     # Print firstName motherName fatherName
-   p @fullname=fullname 
-  end
-end
+
+#    p @fullname=fullname 
+#   end
+# end
 
 
 # Class Son is sub-Class of Mother   
@@ -83,12 +94,33 @@ end
 
 # instantiate an object and print his firstName, secondName, lastName fullName.
 
-son=Son.new
-son.firstName("Bruce")
-mom=Mother.new
-mom.midlname("Martha")
-dad=Father.new
-dad.lname("Thomas")
-son.fullName("Bruce Martha Thomas")
+# son=Son.new
+# son.firstName("Bruce")
+# mom=Mother.new
+# mom.midlname("Martha")
+# dad=Father.new
+# dad.lname("Thomas")
+# son.fullName("Bruce Martha Thomas")
 
+class Family
+	def father
+		"Thomas"
+	end
+	def mother
+		"Martha"
+	end
+end
+class Son < Family
+	def son
+		"Bruce"
+	end	
+	def full_name
+	puts "firstName->:#{son}"
+	puts "secondName->:#{mother}"
+    puts "lastName->:#{father}"
+    puts "fullName->:#{son} #{mother} #{father}"					
+	end
+end
 
+s = Son.new
+s.full_name
