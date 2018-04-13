@@ -103,23 +103,23 @@
 # son.fullName("Bruce Martha Thomas")
 
 class Family
-	def father
-		"Thomas"
-	end
-	def mother
-		"Martha"
-	end
+ def father
+  "Thomas"
+end
+def mother
+  "Martha"
+end
 end
 class Son < Family
-	def son
-		"Bruce"
-	end	
-	def full_name
-	puts "firstName->:#{son}"
-	puts "secondName->:#{mother}"
-    puts "lastName->:#{father}"
-    puts "fullName->:#{son} #{mother} #{father}"					
-	end
+ def son
+  "Bruce"
+end	
+def full_name
+ puts "firstName->:#{son}"
+ puts "secondName->:#{mother}"
+ puts "lastName->:#{father}"
+ puts "fullName->:#{son} #{mother} #{father}"					
+end
 end
 
 s = Son.new

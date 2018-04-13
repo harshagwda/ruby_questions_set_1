@@ -33,35 +33,35 @@
   # Result 1
   # 2
 
-class Poly
-  def c_add(x)
-    x.c_add
+  class Poly
+    def c_add(x)
+      x.c_add
+    end
   end
-end
-class Addition
-  def c_add
-    puts "Enter the first value"
-    @x = Float(gets)
-    puts "Enter the second value"
-    @y = Float(gets)
-    @z = @x + @y
-    puts "The Sum is :#{@z}"
-    puts "==========Addtion==========="
+  class Addition
+    def c_add
+      puts "Enter the first value"
+      @x = Float(gets)
+      puts "Enter the second value"
+      @y = Float(gets)
+      @z = @x + @y
+      puts "The Sum is :#{@z}"
+      puts "==========Addtion==========="
+    end
   end
-end
-class Concat
-  def c_add
-    puts "Enter the first value"
-    @x = gets.to_i
-    puts "Enter the second value"
-    @y = gets.to_i
-    puts "The result is :#{@x}#{@y}"
-    puts "==========Concatination=========="
+  class Concat
+    def c_add
+      puts "Enter the first value"
+      @x = gets.to_i
+      puts "Enter the second value"
+      @y = gets.to_i
+      puts "The result is :#{@x}#{@y}"
+      puts "==========Concatination=========="
+    end
   end
-end
 
-a = Poly.new
-b = Addition.new
-a.c_add(b)
-c = Concat.new
-a.c_add(c)
+  a = Poly.new
+  b = Addition.new
+  a.c_add(b)
+  c = Concat.new
+  a.c_add(c)

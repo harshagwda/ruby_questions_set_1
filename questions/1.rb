@@ -15,6 +15,6 @@ a = [{"name" => "john", "children" => ["a", "b","C"]},
 # a.each_value{|value| puts value.values >= 2}
 a.map do |val|
 	p val["name"] if 
-		val["children"].count >= 2
-	end
+	val["children"].count >= 2
+end
 

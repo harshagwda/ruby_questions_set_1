@@ -27,4 +27,3 @@ om = Home.new
 om.authenticate_user(true)
 pro = Products.new
 pro.authenticate_user(false)
-	
